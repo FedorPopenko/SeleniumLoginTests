@@ -55,26 +55,26 @@ Make sure that all tasks are supported by these 3 conditions: UC-1; UC-2; UC-3.
 
 FinalTask
 │
-├── README
+├── README/
 │ └── README.md
 │
-├── BusinesseLayer
-│ ├── Config
+├── BusinesseLayer/
+│ ├── Config/
 │ │ ├── log4net.config
 │ │ └── LoggingConfig.cs
 │ │
-│ └── PageObjects
+│ └── PageObjects/
 │   └── LoginPage.cs
 │
-├── CoreLayer
-│ ├── WebDriver
+├── CoreLayer/
+│ ├── WebDriver/
 │ │ ├── WebDriverExtensions.cs
 │ │ └── WebDriverFactory.cs
 │ │
 │ └── BrowserType.cs
 │
-├── TestLayer
+├── TestLayer/
 │ ├── LoginTestData.cs/ # Data providers for xUnit
 │ └── UnitTest1.cs # UC-1, UC-2, UC-3
 │
-└── Logs
+└── Logs/
