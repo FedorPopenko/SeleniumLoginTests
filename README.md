@@ -1,6 +1,7 @@
 ﻿
 ## Task Description
-Launch URL: https://www.saucedemo.com/
+Launch URL: https://www.saucedemo.com/  
+
 Provide parallel execution, add logging for tests and use Data Provider to parametrize tests.
 Make sure that all tasks are supported by these 3 conditions: UC-1; UC-2; UC-3.
 
@@ -49,32 +50,3 @@ Make sure that all tasks are supported by these 3 conditions: UC-1; UC-2; UC-3.
 | **Design Patterns** | Page Object, Data Provider |
 | **Helpers** | `WebDriverExtensions` for waits and readiness checks |
 
----
-
-##  Project Structure
-
-FinalTask
-│
-├── README/
-│ └── README.md
-│
-├── BusinesseLayer/
-│ ├── Config/
-│ │ ├── log4net.config
-│ │ └── LoggingConfig.cs
-│ │
-│ └── PageObjects/
-│   └── LoginPage.cs
-│
-├── CoreLayer/
-│ ├── WebDriver/
-│ │ ├── WebDriverExtensions.cs
-│ │ └── WebDriverFactory.cs
-│ │
-│ └── BrowserType.cs
-│
-├── TestLayer/
-│ ├── LoginTestData.cs/ # Data providers for xUnit
-│ └── UnitTest1.cs # UC-1, UC-2, UC-3
-│
-└── Logs/
