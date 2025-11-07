@@ -1,0 +1,7 @@
+2025-11-07 22:06:50,311 [16] INFO  UnitTest3_Chrome - Test started
+2025-11-07 22:06:50,318 [16] INFO  UnitTest3_Chrome - Starting test: Login_WithValidCredentials
+2025-11-07 22:06:51,109 [16] INFO  UnitTest3_Chrome - Opening login page.
+2025-11-07 22:06:51,789 [16] INFO  UnitTest3_Chrome - Entering username.
+2025-11-07 22:06:51,914 [16] INFO  UnitTest3_Chrome - Entering password.
+2025-11-07 22:06:52,016 [16] INFO  UnitTest3_Chrome - Clicking login button.
+2025-11-07 22:06:52,164 [16] INFO  UnitTest3_Chrome - Test passed

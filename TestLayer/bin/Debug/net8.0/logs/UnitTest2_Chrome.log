@@ -1,0 +1,8 @@
+2025-11-07 22:07:06,136 [15] INFO  UnitTest2_Chrome - Test started
+2025-11-07 22:07:06,136 [15] INFO  UnitTest2_Chrome - Starting test: Login_WithUsernameOnly
+2025-11-07 22:07:07,767 [15] INFO  UnitTest2_Chrome - Opening login page.
+2025-11-07 22:07:09,085 [15] INFO  UnitTest2_Chrome - Entering username.
+2025-11-07 22:07:09,270 [15] INFO  UnitTest2_Chrome - Entering password.
+2025-11-07 22:07:09,379 [15] INFO  UnitTest2_Chrome - Clearing Password field.
+2025-11-07 22:07:09,498 [15] INFO  UnitTest2_Chrome - Clicking login button.
+2025-11-07 22:07:09,573 [15] INFO  UnitTest2_Chrome - Test passed

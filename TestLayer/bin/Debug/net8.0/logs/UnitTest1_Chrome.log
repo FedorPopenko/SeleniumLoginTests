@@ -1,0 +1,9 @@
+2025-11-07 22:07:06,092 [14] INFO  UnitTest1_Chrome - Test started
+2025-11-07 22:07:06,093 [14] INFO  UnitTest1_Chrome - Starting test: Login_WithEmptyCredentials
+2025-11-07 22:07:07,927 [14] INFO  UnitTest1_Chrome - Opening login page.
+2025-11-07 22:07:08,667 [14] INFO  UnitTest1_Chrome - Entering username.
+2025-11-07 22:07:08,779 [14] INFO  UnitTest1_Chrome - Entering password.
+2025-11-07 22:07:08,866 [14] INFO  UnitTest1_Chrome - Clearing Username field.
+2025-11-07 22:07:08,969 [14] INFO  UnitTest1_Chrome - Clearing Password field.
+2025-11-07 22:07:09,048 [14] INFO  UnitTest1_Chrome - Clicking login button.
+2025-11-07 22:07:09,142 [14] INFO  UnitTest1_Chrome - Test passed
