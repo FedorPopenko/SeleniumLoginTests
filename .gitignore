@@ -1,13 +1,85 @@
-bin/
-obj/
+# Build & Compile Artifacts
 
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+bld/
+x64/
+x86/
+[Aa][Rr][Mm]*/
+[Rr]elease*/
+[Dd]ebug*/
+[Dd]ebugPublic/
+artifacts/
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# .NET & NuGet
+
+project.lock.json
+project.fragment.lock.json
+*.nuget.props
+*.nuget.targets
+*.nupkg
+*.snupkg
+packages/
+
+# Test Results
+
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+coverage.cobertura.xml
+coverage.opencover.xml
+
+# IDE & Editor Files
+
+.vs/
+.vscode/
+.idea/
 *.user
 *.suo
-*.vs/
+*.userosscache
+*.sln.docstates
+
+# Browser Drivers & Selenium
+
+chromedriver.exe
+geckodriver.exe
 *.log
-.vscode/
-*.nupkg
-packages/
-*.DotSettings.user
+webdriver.log
+
+# Logs
+
+logs/
+*.log
+
+# System Files
+
 Thumbs.db
-.DS_Store
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Misc
+
+~$*
+*~
+*.tmp
+*.bak
+*.swp
+*.orig
+*.docstates
+
+# Documentation / Output
+
+!README.md
+!*.md

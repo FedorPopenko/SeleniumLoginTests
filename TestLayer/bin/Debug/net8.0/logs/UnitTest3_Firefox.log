@@ -1,7 +1,0 @@
-2025-11-07 22:06:52,447 [16] INFO  UnitTest3_Firefox - Test started
-2025-11-07 22:06:52,448 [16] INFO  UnitTest3_Firefox - Starting test: Login_WithValidCredentials
-2025-11-07 22:07:01,138 [16] INFO  UnitTest3_Firefox - Opening login page.
-2025-11-07 22:07:02,685 [16] INFO  UnitTest3_Firefox - Entering username.
-2025-11-07 22:07:03,225 [16] INFO  UnitTest3_Firefox - Entering password.
-2025-11-07 22:07:03,417 [16] INFO  UnitTest3_Firefox - Clicking login button.
-2025-11-07 22:07:03,996 [16] INFO  UnitTest3_Firefox - Test passed

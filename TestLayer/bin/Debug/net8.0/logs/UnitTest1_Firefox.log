@@ -1,9 +1,0 @@
-2025-11-07 22:06:50,311 [14] INFO  UnitTest1_Firefox - Test started
-2025-11-07 22:06:50,318 [14] INFO  UnitTest1_Firefox - Starting test: Login_WithEmptyCredentials
-2025-11-07 22:06:59,138 [14] INFO  UnitTest1_Firefox - Opening login page.
-2025-11-07 22:07:01,453 [14] INFO  UnitTest1_Firefox - Entering username.
-2025-11-07 22:07:02,232 [14] INFO  UnitTest1_Firefox - Entering password.
-2025-11-07 22:07:02,432 [14] INFO  UnitTest1_Firefox - Clearing Username field.
-2025-11-07 22:07:02,913 [14] INFO  UnitTest1_Firefox - Clearing Password field.
-2025-11-07 22:07:03,420 [14] INFO  UnitTest1_Firefox - Clicking login button.
-2025-11-07 22:07:03,749 [14] INFO  UnitTest1_Firefox - Test passed

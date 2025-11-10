@@ -1,8 +1,0 @@
-2025-11-07 22:06:50,311 [15] INFO  UnitTest2_Firefox - Test started
-2025-11-07 22:06:50,318 [15] INFO  UnitTest2_Firefox - Starting test: Login_WithUsernameOnly
-2025-11-07 22:06:59,630 [15] INFO  UnitTest2_Firefox - Opening login page.
-2025-11-07 22:07:01,447 [15] INFO  UnitTest2_Firefox - Entering username.
-2025-11-07 22:07:02,298 [15] INFO  UnitTest2_Firefox - Entering password.
-2025-11-07 22:07:02,342 [15] INFO  UnitTest2_Firefox - Clearing Password field.
-2025-11-07 22:07:02,875 [15] INFO  UnitTest2_Firefox - Clicking login button.
-2025-11-07 22:07:03,368 [15] INFO  UnitTest2_Firefox - Test passed
