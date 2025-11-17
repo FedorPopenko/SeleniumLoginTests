@@ -10,20 +10,26 @@ using OpenQA.Selenium;
 
 namespace TestLayer
 {
-    public class UnitTest1
+    public class TestBase
     {
-        [Theory]
-        [MemberData(nameof(LoginTestData.UnitTest1_GetLoginData), MemberType = typeof(LoginTestData))]
-        public void GivenEmptyCredentials_WhenUserTriesToLogin_ThenErrorMessageIsDisplayed(BrowserType browserType, string username, string password)
+        public required ILog Logger { get; set; }
+        public IWebDriver Init(BrowserType browserType, string testName)
         {
             string browser = browserType.ToString();
-            string testClass = GetType().Name;
-            ILog logger = LoggingConfig.Configure(browser, testClass);
-            logger.Info("Starting test: Login_WithEmptyCredentials");
-
+            Logger = LoggingConfig.Configure(browser, testName);
+            Logger.Info($"Starting test: {testName}");
+            return WebDriverFactory.Create(browserType);
+        }
+    }
+    public class Login_WithEmptyCredentials : TestBase
+    {
+        [Theory]
+        [MemberData(nameof(LoginTestData.Login_WithEmptyCredentials_GetLoginData), MemberType = typeof(LoginTestData))]
+        public void GivenEmptyCredentials_WhenUserTriesToLogin_ThenErrorMessageIsDisplayed(BrowserType browserType, string username, string password)
+        {
             //Arrange
-            using var driver = WebDriverFactory.Create(browserType);
-            var loginPage = new LoginPage(driver, logger);
+            using var driver = Init(browserType, GetType().Name);
+            var loginPage = new LoginPage(driver, Logger);
             //Act
             loginPage.Open()
                      .Username(username)
@@ -36,23 +42,18 @@ namespace TestLayer
             errorMessage.Displayed
                         .Should().BeTrue("Because the username field is required and the error should be visible");
 
-            logger.Info("Test passed");
+            Logger.Info("Test passed");
         }
     }
-    public class UnitTest2
+    public class Login_WithUsernameOnly : TestBase
     {
         [Theory]
-        [MemberData(nameof(LoginTestData.UnitTest2_GetLoginData), MemberType = typeof(LoginTestData))]
+        [MemberData(nameof(LoginTestData.Login_WithUsernameOnly_GetLoginData), MemberType = typeof(LoginTestData))]
         public void GivenUsernameOnly_WhenLoginAttempted_ThenPasswordErrorDisplayed(BrowserType browserType, string username, string password)
         {
-            string browser = browserType.ToString();
-            string testClass = GetType().Name;
-            ILog logger = LoggingConfig.Configure(browser, testClass);
-            logger.Info("Starting test: Login_WithUsernameOnly");
-
             //Arrange
-            using var driver = WebDriverFactory.Create(browserType);
-            var loginPage = new LoginPage(driver, logger);
+            using var driver = Init(browserType, GetType().Name);
+            var loginPage = new LoginPage(driver, Logger);
             //Act
             loginPage.Open()
                      .Username(username)
@@ -64,24 +65,19 @@ namespace TestLayer
             errorMessage.Displayed
                         .Should().BeTrue("Because the password field is required and the error should be visible");
 
-            logger.Info("Test passed");
+            Logger.Info("Test passed");
         }
     }
 
-    public class UnitTest3
+    public class Login_WithValidCredentials : TestBase
     {
         [Theory]
-        [MemberData(nameof(LoginTestData.UnitTest3_GetLoginData), MemberType = typeof(LoginTestData))]
+        [MemberData(nameof(LoginTestData.Login_WithValidCredentials_GetLoginData), MemberType = typeof(LoginTestData))]
         public void GivenValidCredentials_WhenUserLogsIn_ThenUserIsRedirectedToMainPage(BrowserType browserType, string username, string password)
         {
-            string browser = browserType.ToString();
-            string testClass = GetType().Name;
-            ILog logger = LoggingConfig.Configure(browser, testClass);
-            logger.Info("Starting test: Login_WithValidCredentials");
-
             //Arrange
-            using var driver = WebDriverFactory.Create(browserType);
-            var loginPage = new LoginPage(driver, logger);
+            using var driver = Init(browserType, GetType().Name);
+            var loginPage = new LoginPage(driver, Logger);
             //Act
             loginPage.Open()
                      .Username(username)
@@ -92,7 +88,7 @@ namespace TestLayer
             mainPage.Displayed
                     .Should().BeTrue("Because the user should be redirected to the main page after valid login");
 
-            logger.Info("Test passed");
+            Logger.Info("Test passed");
         }
     }
 }

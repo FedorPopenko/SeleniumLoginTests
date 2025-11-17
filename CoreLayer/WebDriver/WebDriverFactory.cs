@@ -16,8 +16,6 @@ namespace CoreLayer.WebDriver
             };
 
             driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
-
             return driver;
         }
     }
