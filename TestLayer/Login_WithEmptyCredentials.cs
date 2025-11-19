@@ -38,11 +38,8 @@ namespace TestLayer
             loginPage.PasswordClear();
             loginPage.LoginButtonClick();
             //Assert
-            var errorMessage = driver.FindElement(By.XPath("//*[contains(text(),'Username is required')]"));
-            errorMessage.Displayed
-                        .Should().BeTrue("Because the username field is required and the error should be visible");
-
-            Logger.Info("Test passed");
+            var errorMessage = loginPage.IsUsernameRequiredErrorDisplayed();
+            errorMessage.Should().BeTrue("Because the username field is required and the error should be visible");
         }
     }
     public class Login_WithUsernameOnly : TestBase
@@ -61,11 +58,8 @@ namespace TestLayer
                      .PasswordClear();
             loginPage.LoginButtonClick();
             //Assert
-            var errorMessage = driver.FindElement(By.XPath("//*[contains(text(),'Password is required')]"));
-            errorMessage.Displayed
-                        .Should().BeTrue("Because the password field is required and the error should be visible");
-
-            Logger.Info("Test passed");
+            var errorMessage = loginPage.IsPasswordRequiredErrorDisplayed();
+            errorMessage.Should().BeTrue("Because the password field is required and the error should be visible");
         }
     }
 
@@ -84,11 +78,8 @@ namespace TestLayer
                      .Password(password)
                      .LoginButtonClick();
             //Assert
-            var mainPage = driver.FindElement(By.XPath("//div[contains(text(),'Swag Labs')]"));
-            mainPage.Displayed
-                    .Should().BeTrue("Because the user should be redirected to the main page after valid login");
-
-            Logger.Info("Test passed");
+            var mainPage = loginPage.IsMainPageDisplayed();
+            mainPage.Should().BeTrue("Because the user should be redirected to the main page after valid login");
         }
     }
 }
